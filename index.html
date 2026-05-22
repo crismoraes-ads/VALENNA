@@ -19,15 +19,15 @@ padding:0;
 box-sizing:border-box;
 }
 
-/* CORPO DO SITE */
+/* CORPO */
 
 body{
-background:#2b1612;
 font-family:Arial,sans-serif;
+background:#1b0f0c;
 color:#f5e7d3;
 }
 
-/* MENU SUPERIOR */
+/* MENU */
 
 header{
 
@@ -35,32 +35,40 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:20px 40px;
+padding:25px 50px;
 
-background:#2b1612;
+background:#1b0f0c;
+
+position:fixed;
+
+width:100%;
+
+top:0;
+
+z-index:1000;
 }
 
 /* LOGO */
 
 .logo{
 
-font-size:30px;
+font-size:32px;
+
 font-weight:bold;
 
-letter-spacing:5px;
+letter-spacing:6px;
 
-color:#d4af37;
+color:#c8a96b;
 }
 
-/* MENU */
+/* MENU LINKS */
 
 .menu{
 
 display:flex;
-gap:20px;
-}
 
-/* LINKS */
+gap:30px;
+}
 
 .menu a{
 
@@ -69,69 +77,210 @@ text-decoration:none;
 color:#f5e7d3;
 
 font-size:14px;
+
+transition:0.3s;
 }
 
-/* ÁREA PRINCIPAL */
+.menu a:hover{
+
+color:#c8a96b;
+}
+
+/* HERO */
 
 .hero{
 
-height:90vh;
+height:100vh;
+
+background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
+
+background-size:cover;
+
+background-position:center;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
 text-align:center;
+
+position:relative;
 }
 
-/* TÍTULO */
+/* ESCURECER IMAGEM */
 
-.hero h1{
+.overlay{
 
-font-size:75px;
+position:absolute;
 
-letter-spacing:8px;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.55);
+}
+
+/* CONTEÚDO HERO */
+
+.hero-conteudo{
+
+position:relative;
+
+z-index:2;
+}
+
+.hero-conteudo h1{
+
+font-size:90px;
+
+letter-spacing:10px;
 
 margin-bottom:20px;
 }
 
-/* FRASE */
+.hero-conteudo p{
 
-.hero p{
+font-size:28px;
 
-font-size:25px;
+color:#c8a96b;
 
-margin-bottom:30px;
-
-color:#d4af37;
+margin-bottom:35px;
 }
 
 /* BOTÃO */
 
-button{
+.botao{
 
-padding:15px 40px;
-
-background:#d4af37;
+padding:16px 45px;
 
 border:none;
+
+background:#c8a96b;
+
+color:#1b0f0c;
 
 font-weight:bold;
 
 cursor:pointer;
+
+transition:0.3s;
 }
 
-/* RODAPÉ */
+.botao:hover{
 
-footer{
+background:#f5e7d3;
+}
 
-padding:30px;
+/* SEÇÃO PRODUTOS */
+
+.produtos{
+
+padding:100px 50px;
+
+text-align:center;
+}
+
+.produtos h2{
+
+font-size:40px;
+
+margin-bottom:50px;
+
+color:#c8a96b;
+}
+
+/* CARDS */
+
+.cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+}
+
+.card{
+
+background:#2b1612;
+
+width:300px;
+
+padding:20px;
+
+border-radius:12px;
+}
+
+.card img{
+
+width:100%;
+
+height:400px;
+
+object-fit:cover;
+
+border-radius:10px;
+}
+
+.card h3{
+
+margin-top:20px;
+
+font-size:22px;
+}
+
+.card p{
+
+margin:15px 0;
+
+color:#c8a96b;
+
+font-size:20px;
+}
+
+/* SOBRE */
+
+.sobre{
+
+padding:100px 50px;
 
 text-align:center;
 
 background:#140b09;
+}
 
-color:#d4af37;
+.sobre h2{
+
+font-size:40px;
+
+margin-bottom:30px;
+
+color:#c8a96b;
+}
+
+.sobre p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#0d0605;
+
+color:#c8a96b;
 }
 
 </style>
@@ -148,35 +297,110 @@ color:#d4af37;
 VALENNA
 </div>
 
-<div class="menu">
+<nav class="menu">
 
-<a href="#">INÍCIO</a>
+<a href="#">HOME</a>
 
-<a href="#">COLEÇÃO</a>
+<a href="#">NEW COLLECTION</a>
 
-<a href="#">SOBRE</a>
+<a href="#">VALENNA</a>
 
-<a href="#">CONTATO</a>
+<a href="#">SUPORTE</a>
 
-</div>
+</nav>
 
 </header>
 
-<!-- CAPA -->
+<!-- HERO -->
 
 <section class="hero">
 
-<div>
+<div class="overlay"></div>
+
+<div class="hero-conteudo">
 
 <h1>VALENNA</h1>
 
-<p>Vista sua confiança.</p>
+<p>Elegância, poder e feminilidade.</p>
 
-<button>
-COMPRAR AGORA
+<button class="botao">
+SHOP VALENNA
 </button>
 
 </div>
+
+</section>
+
+<!-- PRODUTOS -->
+
+<section class="produtos">
+
+<h2>NOVA COLEÇÃO</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Conjunto Premium</h3>
+
+<p>R$ 189,90</p>
+
+<button class="botao">
+COMPRAR
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Legging Luxury</h3>
+
+<p>R$ 149,90</p>
+
+<button class="botao">
+COMPRAR
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Top Fitness</h3>
+
+<p>R$ 99,90</p>
+
+<button class="botao">
+COMPRAR
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section class="sobre">
+
+<h2>SOBRE A VALENNA</h2>
+
+<p>
+
+A VALENNA nasceu para mulheres fortes,
+sofisticadas e confiantes.
+
+Mais do que roupas,
+representamos autoestima,
+elegância e poder feminino.
+
+</p>
 
 </section>
 
@@ -186,7 +410,7 @@ COMPRAR AGORA
 
 <p>VALENNA © 2026</p>
 
-<p>Moda fitness • autoestima • elegância feminina</p>
+<p>Luxury Fitness Fashion</p>
 
 </footer>
 
