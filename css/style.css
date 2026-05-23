@@ -1,1 +1,264 @@
-css/style.css
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#1b0f0c;
+color:#f5e7d3;
+}
+
+/* MENU */
+
+header{
+
+position:fixed;
+top:0;
+width:100%;
+
+background:#1b0f0c;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 40px;
+
+z-index:1000;
+}
+
+.logo{
+
+font-size:30px;
+font-weight:bold;
+
+letter-spacing:5px;
+
+color:#c8a96b;
+}
+
+/* MENU */
+
+.menu{
+
+display:flex;
+gap:30px;
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:#f5e7d3;
+
+transition:0.3s;
+}
+
+.menu a:hover{
+
+color:#c8a96b;
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+position:relative;
+}
+
+.overlay{
+
+position:absolute;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+}
+
+.hero-conteudo{
+
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+
+font-size:90px;
+
+letter-spacing:10px;
+
+margin-bottom:20px;
+}
+
+.hero p{
+
+font-size:28px;
+
+color:#c8a96b;
+
+margin-bottom:30px;
+}
+
+/* BOTÃO */
+
+.botao{
+
+padding:15px 40px;
+
+background:#c8a96b;
+
+color:#1b0f0c;
+
+border:none;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.botao:hover{
+
+background:#f5e7d3;
+}
+
+/* PRODUTOS */
+
+.produtos{
+
+padding:100px 40px;
+
+text-align:center;
+}
+
+.produtos h2{
+
+font-size:40px;
+
+margin-bottom:50px;
+
+color:#c8a96b;
+}
+
+.cards{
+
+display:flex;
+justify-content:center;
+gap:30px;
+
+flex-wrap:wrap;
+}
+
+.card{
+
+background:#2b1612;
+
+width:300px;
+
+padding:20px;
+
+border-radius:10px;
+}
+
+.card img{
+
+width:100%;
+height:400px;
+
+object-fit:cover;
+
+border-radius:10px;
+}
+
+.card h3{
+
+margin-top:20px;
+}
+
+.card p{
+
+margin:15px 0;
+
+color:#c8a96b;
+}
+
+/* SOBRE */
+
+.sobre{
+
+padding:100px 40px;
+
+text-align:center;
+
+background:#140b09;
+}
+
+/* CONTATO */
+
+.contato{
+
+padding:100px 40px;
+
+text-align:center;
+}
+
+.links-contato{
+
+display:flex;
+justify-content:center;
+gap:20px;
+
+flex-wrap:wrap;
+}
+
+.links-contato a{
+
+text-decoration:none;
+
+background:#2b1612;
+
+padding:15px 30px;
+
+border-radius:8px;
+
+color:#f5e7d3;
+
+transition:0.3s;
+}
+
+.links-contato a:hover{
+
+background:#c8a96b;
+
+color:#1b0f0c;
+}
+
+/* FOOTER */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#0d0605;
+
+color:#c8a96b;
+}
