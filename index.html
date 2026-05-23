@@ -4,11 +4,12 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VALENNA</title>
 
-<!-- Ícones -->
+<!-- ÍCONES -->
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -32,18 +33,22 @@ background:#1b0f0c;
 color:#f5e7d3;
 }
 
-/* MENU */
+/* HEADER */
 
 header{
 
 position:fixed;
+
 top:0;
+
 width:100%;
 
 background:#1b0f0c;
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
 padding:20px 40px;
@@ -51,9 +56,12 @@ padding:20px 40px;
 z-index:1000;
 }
 
+/* LOGO */
+
 .logo{
 
 font-size:30px;
+
 font-weight:bold;
 
 letter-spacing:5px;
@@ -61,11 +69,12 @@ letter-spacing:5px;
 color:#c8a96b;
 }
 
-/* MENU DESKTOP */
+/* MENU */
 
 .menu{
 
 display:flex;
+
 gap:30px;
 }
 
@@ -79,6 +88,7 @@ transition:0.3s;
 }
 
 .menu a:hover{
+
 color:#c8a96b;
 }
 
@@ -88,7 +98,7 @@ color:#c8a96b;
 
 display:none;
 
-font-size:28px;
+font-size:30px;
 
 cursor:pointer;
 
@@ -104,10 +114,13 @@ height:100vh;
 background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
 
 background-size:cover;
+
 background-position:center;
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 text-align:center;
@@ -115,18 +128,25 @@ text-align:center;
 position:relative;
 }
 
+/* ESCURECER */
+
 .overlay{
 
 position:absolute;
+
 width:100%;
+
 height:100%;
 
 background:rgba(0,0,0,0.6);
 }
 
+/* HERO CONTEÚDO */
+
 .hero-conteudo{
 
 position:relative;
+
 z-index:2;
 }
 
@@ -148,7 +168,7 @@ color:#c8a96b;
 margin-bottom:30px;
 }
 
-/* BOTÃO */
+/* BOTÕES */
 
 .botao{
 
@@ -168,6 +188,9 @@ transition:0.3s;
 }
 
 .botao:hover{
+
+transform:scale(1.05);
+
 background:#f5e7d3;
 }
 
@@ -189,10 +212,14 @@ margin-bottom:50px;
 color:#c8a96b;
 }
 
+/* CARDS */
+
 .cards{
 
 display:flex;
+
 justify-content:center;
+
 gap:30px;
 
 flex-wrap:wrap;
@@ -206,7 +233,7 @@ width:300px;
 
 padding:20px;
 
-border-radius:10px;
+border-radius:12px;
 }
 
 .card img{
@@ -274,16 +301,23 @@ text-align:center;
 
 font-size:40px;
 
-margin-bottom:40px;
+margin-bottom:20px;
 
 color:#c8a96b;
+}
+
+.contato p{
+
+margin-bottom:40px;
 }
 
 .links-contato{
 
 display:flex;
+
 justify-content:center;
-gap:30px;
+
+gap:20px;
 
 flex-wrap:wrap;
 }
@@ -296,7 +330,7 @@ background:#2b1612;
 
 padding:15px 30px;
 
-border-radius:8px;
+border-radius:10px;
 
 color:#f5e7d3;
 
@@ -323,6 +357,39 @@ background:#0d0605;
 color:#c8a96b;
 }
 
+/* WHATSAPP FLUTUANTE */
+
+.whatsapp{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#25D366;
+
+color:white;
+
+width:60px;
+
+height:60px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+font-size:30px;
+
+text-decoration:none;
+
+z-index:999;
+}
+
 /* RESPONSIVO */
 
 @media(max-width:768px){
@@ -334,6 +401,7 @@ display:none;
 position:absolute;
 
 top:80px;
+
 right:20px;
 
 background:#2b1612;
@@ -361,6 +429,13 @@ font-size:55px;
 font-size:22px;
 }
 
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+}
+
 }
 
 </style>
@@ -369,7 +444,7 @@ font-size:22px;
 
 <body>
 
-<!-- MENU -->
+<!-- HEADER -->
 
 <header>
 
@@ -383,7 +458,7 @@ VALENNA
 
 <a href="#produtos">COLEÇÃO</a>
 
-<a href="#sobre">VALENNA</a>
+<a href="#sobre">SOBRE</a>
 
 <a href="#contato">CONTATO</a>
 
@@ -412,7 +487,9 @@ VALENNA
 <a href="#produtos">
 
 <button class="botao">
+
 SHOP VALENNA
+
 </button>
 
 </a>
@@ -437,13 +514,9 @@ SHOP VALENNA
 
 <p>R$ 189,90</p>
 
-<a href="#contato">
-
 <button class="botao">
 COMPRAR
 </button>
-
-</a>
 
 </div>
 
@@ -455,13 +528,9 @@ COMPRAR
 
 <p>R$ 149,90</p>
 
-<a href="#contato">
-
 <button class="botao">
 COMPRAR
 </button>
-
-</a>
 
 </div>
 
@@ -473,13 +542,9 @@ COMPRAR
 
 <p>R$ 99,90</p>
 
-<a href="#contato">
-
 <button class="botao">
 COMPRAR
 </button>
-
-</a>
 
 </div>
 
@@ -495,7 +560,9 @@ COMPRAR
 
 <p>
 
-A VALENNA nasceu para mulheres fortes,
+A VALENNA nasceu em São Paulo,
+na Zona Leste,
+para mulheres fortes,
 sofisticadas e confiantes.
 
 Mais do que roupas,
@@ -511,6 +578,12 @@ elegância e poder feminino.
 <section class="contato" id="contato">
 
 <h2>CONTATO</h2>
+
+<p>
+
+Atendimento online • São Paulo/SP • Zona Leste
+
+</p>
 
 <div class="links-contato">
 
@@ -547,7 +620,18 @@ Email
 
 <p>Luxury Fitness Fashion</p>
 
+<p>São Paulo • Zona Leste • Brasil</p>
+
 </footer>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/5511930103195">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
 
 <!-- SCRIPT -->
 
