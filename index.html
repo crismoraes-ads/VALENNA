@@ -9,11 +9,18 @@
 
 <title>VALENNA</title>
 
-<!-- FAVICON -->
+<link rel="icon" href="imagens/logo/favicon.png">
 
-<link rel="icon" href="favicon.png">
+<!-- FONTS -->
 
-<!-- ÍCONES -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<!-- ICONES -->
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,23 +30,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 /* RESET */
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
+
 }
 
 /* BODY */
 
 body{
 
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 
-background:#1b0f0c;
+background:#120907;
 
 color:#f5e7d3;
 
 overflow-x:hidden;
+
 }
 
 /* HEADER */
@@ -52,7 +62,7 @@ top:0;
 
 width:100%;
 
-background:#1b0f0c;
+padding:20px 40px;
 
 display:flex;
 
@@ -60,27 +70,24 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:20px 40px;
+background:rgba(18,9,7,0.96);
 
-z-index:1000;
+backdrop-filter:blur(12px);
+
+z-index:999;
 
 border-bottom:1px solid rgba(255,255,255,0.05);
+
 }
 
 /* LOGO */
-
-.logo{
-
-display:flex;
-
-align-items:center;
-}
 
 .logo img{
 
 height:60px;
 
 object-fit:contain;
+
 }
 
 /* MENU */
@@ -90,6 +97,7 @@ object-fit:contain;
 display:flex;
 
 gap:30px;
+
 }
 
 .menu a{
@@ -103,11 +111,13 @@ font-size:14px;
 letter-spacing:1px;
 
 transition:0.3s;
+
 }
 
 .menu a:hover{
 
 color:#c8a96b;
+
 }
 
 /* MENU MOBILE */
@@ -121,6 +131,7 @@ font-size:30px;
 cursor:pointer;
 
 color:#c8a96b;
+
 }
 
 /* HERO */
@@ -129,7 +140,7 @@ color:#c8a96b;
 
 height:100vh;
 
-background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
+background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1400&auto=format&fit=crop');
 
 background-size:cover;
 
@@ -144,22 +155,19 @@ align-items:center;
 text-align:center;
 
 position:relative;
-}
 
-/* OVERLAY */
+}
 
 .overlay{
 
 position:absolute;
 
 width:100%;
-
 height:100%;
 
 background:rgba(0,0,0,0.65);
-}
 
-/* HERO CONTEÚDO */
+}
 
 .hero-conteudo{
 
@@ -168,47 +176,57 @@ position:relative;
 z-index:2;
 
 padding:20px;
+
 }
 
 .hero h1{
 
-font-size:90px;
+font-size:100px;
 
-letter-spacing:10px;
+letter-spacing:12px;
 
 margin-bottom:20px;
+
 }
 
 .hero p{
 
-font-size:28px;
+font-size:24px;
 
-color:#c8a96b;
+color:#d6b98c;
 
-margin-bottom:35px;
+margin-bottom:40px;
+
+max-width:700px;
+
+line-height:1.6;
+
 }
 
-/* BOTÕES */
+/* BOTÃO */
 
 .botao{
 
 padding:16px 45px;
 
-background:#c8a96b;
-
-color:#1b0f0c;
-
 border:none;
 
 border-radius:8px;
 
-font-weight:bold;
+background:#c8a96b;
+
+color:#120907;
+
+font-weight:600;
+
+font-size:14px;
 
 letter-spacing:1px;
 
 cursor:pointer;
 
 transition:0.3s;
+
 }
 
 .botao:hover{
@@ -216,15 +234,14 @@ transition:0.3s;
 transform:scale(1.05);
 
 background:#f5e7d3;
+
 }
 
-/* BENEFÍCIOS */
+/* BENEFICIOS */
 
 .beneficios{
 
-padding:80px 40px;
-
-background:#140b09;
+padding:120px 40px;
 
 display:flex;
 
@@ -234,47 +251,139 @@ gap:30px;
 
 flex-wrap:wrap;
 
-text-align:center;
+background:#1a0d0a;
+
 }
 
 .beneficio{
 
-width:250px;
+width:280px;
+
+text-align:center;
+
 }
 
 .beneficio i{
 
-font-size:40px;
+font-size:42px;
 
 color:#c8a96b;
 
 margin-bottom:20px;
+
 }
 
 .beneficio h3{
 
 margin-bottom:15px;
+
+}
+
+/* CATEGORIAS */
+
+.categorias{
+
+padding:120px 40px;
+
+text-align:center;
+
+background:#140b09;
+
+}
+
+.categorias h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+color:#c8a96b;
+
+}
+
+.subtitulo-categorias{
+
+font-size:18px;
+
+margin-bottom:60px;
+
+color:#d6b98c;
+
+}
+
+.categoria-cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.categoria{
+
+width:280px;
+
+background:#1f100d;
+
+border-radius:15px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+cursor:pointer;
+
+}
+
+.categoria:hover{
+
+transform:translateY(-10px);
+
+}
+
+.categoria img{
+
+width:100%;
+
+height:340px;
+
+object-fit:cover;
+
+}
+
+.categoria h3{
+
+padding:25px;
+
+font-size:22px;
+
 }
 
 /* PRODUTOS */
 
 .produtos{
 
-padding:100px 40px;
+padding:120px 40px;
 
 text-align:center;
+
 }
 
 .produtos h2{
 
-font-size:40px;
+font-size:42px;
 
-margin-bottom:50px;
+margin-bottom:60px;
 
 color:#c8a96b;
-}
 
-/* CARDS */
+}
 
 .cards{
 
@@ -285,102 +394,114 @@ justify-content:center;
 gap:30px;
 
 flex-wrap:wrap;
+
 }
 
 .card{
 
-background:#2b1612;
+background:#1f100d;
 
-width:300px;
+width:320px;
 
 padding:20px;
 
-border-radius:12px;
+border-radius:15px;
 
-transition:0.3s;
+transition:0.4s;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
 }
 
 .card:hover{
 
 transform:translateY(-10px);
+
 }
 
 .card img{
 
 width:100%;
 
-height:400px;
+height:420px;
 
 object-fit:cover;
 
-border-radius:10px;
+border-radius:12px;
+
 }
 
 .card h3{
 
 margin-top:20px;
+
+font-size:22px;
+
 }
 
 .card p{
 
 margin:15px 0;
 
+font-size:20px;
+
 color:#c8a96b;
+
 }
 
 /* SOBRE */
 
 .sobre{
 
-padding:100px 40px;
+padding:120px 40px;
 
 text-align:center;
 
-background:#140b09;
+background:#1a0d0a;
+
 }
 
 .sobre h2{
 
-font-size:40px;
+font-size:42px;
 
 margin-bottom:30px;
 
 color:#c8a96b;
+
 }
 
 .sobre p{
 
-max-width:700px;
+max-width:850px;
 
 margin:auto;
 
-line-height:1.8;
+line-height:2;
+
+font-size:17px;
+
 }
 
 /* CONTATO */
 
 .contato{
 
-padding:100px 40px;
+padding:120px 40px;
 
 text-align:center;
+
 }
 
 .contato h2{
 
-font-size:40px;
+font-size:42px;
 
 margin-bottom:20px;
 
 color:#c8a96b;
+
 }
-
-.contato p{
-
-margin-bottom:40px;
-}
-
-/* LINKS */
 
 .links-contato{
 
@@ -391,11 +512,12 @@ justify-content:center;
 gap:20px;
 
 flex-wrap:wrap;
+
+margin-top:40px;
+
 }
 
 .links-contato a{
-
-text-decoration:none;
 
 background:#2b1612;
 
@@ -403,29 +525,34 @@ padding:15px 30px;
 
 border-radius:10px;
 
+text-decoration:none;
+
 color:#f5e7d3;
 
 transition:0.3s;
+
 }
 
 .links-contato a:hover{
 
 background:#c8a96b;
 
-color:#1b0f0c;
+color:#120907;
+
 }
 
 /* FOOTER */
 
 footer{
 
-padding:40px;
+padding:50px;
 
 text-align:center;
 
-background:#0d0605;
+background:#0b0504;
 
 color:#c8a96b;
+
 }
 
 /* WHATSAPP */
@@ -438,13 +565,13 @@ bottom:20px;
 
 right:20px;
 
+width:65px;
+
+height:65px;
+
 background:#25D366;
 
-color:white;
-
-width:60px;
-
-height:60px;
+border-radius:50%;
 
 display:flex;
 
@@ -452,13 +579,14 @@ justify-content:center;
 
 align-items:center;
 
-border-radius:50%;
+font-size:32px;
 
-font-size:30px;
+color:white;
 
 text-decoration:none;
 
 z-index:999;
+
 }
 
 /* RESPONSIVO */
@@ -468,6 +596,7 @@ z-index:999;
 header{
 
 padding:20px;
+
 }
 
 .menu{
@@ -476,52 +605,58 @@ display:none;
 
 position:absolute;
 
-top:80px;
+top:90px;
 
 right:20px;
 
-background:#2b1612;
-
-flex-direction:column;
+background:#1f100d;
 
 padding:20px;
 
 border-radius:10px;
+
+flex-direction:column;
+
 }
 
 .menu.ativo{
+
 display:flex;
+
 }
 
 .hamburguer{
+
 display:block;
+
 }
 
 .hero h1{
+
 font-size:55px;
+
 }
 
 .hero p{
-font-size:22px;
-}
 
-.cards{
+font-size:18px;
 
-flex-direction:column;
-
-align-items:center;
-}
-
-.beneficios{
-
-flex-direction:column;
-
-align-items:center;
 }
 
 .logo img{
 
 height:45px;
+
+}
+
+.cards,
+.categoria-cards,
+.beneficios{
+
+flex-direction:column;
+
+align-items:center;
+
 }
 
 }
@@ -538,7 +673,7 @@ height:45px;
 
 <div class="logo">
 
-<img src="logo-valenna.png"
+<img src="imagens/logo/logo-valenna.png"
 alt="VALENNA">
 
 </div>
@@ -547,7 +682,9 @@ alt="VALENNA">
 
 <a href="#">HOME</a>
 
-<a href="#produtos">COLEÇÃO</a>
+<a href="#categorias">CATEGORIAS</a>
+
+<a href="#produtos">NOVIDADES</a>
 
 <a href="#sobre">SOBRE</a>
 
@@ -555,7 +692,8 @@ alt="VALENNA">
 
 </nav>
 
-<div class="hamburguer" onclick="abrirMenu()">
+<div class="hamburguer"
+onclick="abrirMenu()">
 
 <i class="fas fa-bars"></i>
 
@@ -573,13 +711,21 @@ alt="VALENNA">
 
 <h1>VALENNA</h1>
 
-<p>Elegância, poder e feminilidade.</p>
+<p>
 
-<a href="#produtos">
+Sensualidade,
+elegância,
+moda,
+fitness
+e lifestyle premium em um só lugar.
+
+</p>
+
+<a href="#categorias">
 
 <button class="botao">
 
-SHOP VALENNA
+EXPLORAR VALENNA
 
 </button>
 
@@ -589,27 +735,24 @@ SHOP VALENNA
 
 </section>
 
-<!-- BENEFÍCIOS -->
+<!-- BENEFICIOS -->
 
 <section class="beneficios">
 
 <div class="beneficio">
 
-<i class="fas fa-shield-alt"></i>
+<i class="fas fa-gem"></i>
 
-<h3>Compra Segura</h3>
+<h3>Curadoria Premium</h3>
 
-<p>Ambiente protegido para suas compras.</p>
+<p>
 
-</div>
+Seleção sofisticada de moda,
+beauty,
+fitness
+e acessórios.
 
-<div class="beneficio">
-
-<i class="fas fa-truck"></i>
-
-<h3>Entrega Rápida</h3>
-
-<p>Envios para todo Brasil.</p>
+</p>
 
 </div>
 
@@ -617,9 +760,117 @@ SHOP VALENNA
 
 <i class="fas fa-heart"></i>
 
-<h3>Qualidade Premium</h3>
+<h3>Autocuidado</h3>
 
-<p>Moda fitness sofisticada.</p>
+<p>
+
+Produtos voltados para autoestima,
+beleza
+e presença feminina.
+
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<i class="fas fa-star"></i>
+
+<h3>Experiência VALENNA</h3>
+
+<p>
+
+Uma loja criada para mulheres
+que valorizam estilo,
+identidade
+e elegância.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CATEGORIAS -->
+
+<section class="categorias" id="categorias">
+
+<h2>CATEGORIAS VALENNA</h2>
+
+<p class="subtitulo-categorias">
+
+Moda,
+fitness,
+beauty
+e lifestyle premium.
+
+</p>
+
+<div class="categoria-cards">
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Fitness</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Parte de Cima</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Parte de Baixo</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Moda Praia</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Acessórios</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Bolsas</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Beauty</h3>
+
+</div>
+
+<div class="categoria">
+
+<img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Lifestyle</h3>
+
+</div>
 
 </div>
 
@@ -629,39 +880,49 @@ SHOP VALENNA
 
 <section class="produtos" id="produtos">
 
-<h2>NOVA COLEÇÃO</h2>
+<h2>NOVIDADES VALENNA</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
 
-<h3>Conjunto Premium</h3>
+<h3>Fashion Premium</h3>
 
 <p>R$ 189,90</p>
+
+<a href="https://wa.me/5511930103195"
+target="_blank">
 
 <button class="botao">
 
 COMPRAR
 
 </button>
+
+</a>
 
 </div>
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
 
-<h3>Legging Luxury</h3>
+<h3>Luxury Collection</h3>
 
 <p>R$ 149,90</p>
+
+<a href="https://wa.me/5511930103195"
+target="_blank">
 
 <button class="botao">
 
 COMPRAR
 
 </button>
+
+</a>
 
 </div>
 
@@ -669,15 +930,20 @@ COMPRAR
 
 <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
 
-<h3>Top Fitness</h3>
+<h3>Beach & Lifestyle</h3>
 
 <p>R$ 99,90</p>
+
+<a href="https://wa.me/5511930103195"
+target="_blank">
 
 <button class="botao">
 
 COMPRAR
 
 </button>
+
+</a>
 
 </div>
 
@@ -693,14 +959,32 @@ COMPRAR
 
 <p>
 
-A VALENNA nasceu em São Paulo,
-na Zona Leste,
-para mulheres fortes,
-sofisticadas e confiantes.
+A VALENNA nasceu da paixão por estética,
+autocuidado,
+elegância
+e feminilidade.
+
+A proposta da loja é reunir produtos
+que transmitam estilo,
+presença
+e confiança.
 
 Mais do que roupas,
-representamos autoestima,
-elegância e poder feminino.
+a VALENNA traz uma seleção de moda,
+fitness,
+acessórios,
+beauty
+e lifestyle voltada para mulheres
+que gostam de se sentir bem,
+expressar sua personalidade
+e valorizar sua própria essência.
+
+Cada detalhe da loja representa
+uma estética sofisticada,
+moderna
+e marcante.
+
+São Paulo • Zona Leste • Brasil
 
 </p>
 
@@ -720,16 +1004,20 @@ Atendimento online • São Paulo/SP • Zona Leste
 
 <div class="links-contato">
 
-<a href="https://wa.me/5511930103195">
+<a href="https://wa.me/5511930103195"
+target="_blank">
 
 <i class="fab fa-whatsapp"></i>
+
 WhatsApp
 
 </a>
 
-<a href="https://instagram.com/valenna.fit">
+<a href="https://instagram.com/valenna.fit"
+target="_blank">
 
 <i class="fab fa-instagram"></i>
+
 Instagram
 
 </a>
@@ -737,6 +1025,7 @@ Instagram
 <a href="mailto:cristecads@gmail.com">
 
 <i class="fas fa-envelope"></i>
+
 Email
 
 </a>
@@ -751,16 +1040,17 @@ Email
 
 <p>VALENNA © 2026</p>
 
-<p>Luxury Fitness Fashion</p>
+<p>Luxury Feminine Lifestyle</p>
 
 <p>São Paulo • Zona Leste • Brasil</p>
 
 </footer>
 
-<!-- WHATSAPP -->
+<!-- BOTÃO WHATSAPP -->
 
 <a class="whatsapp"
-href="https://wa.me/5511930103195">
+href="https://wa.me/5511930103195"
+target="_blank">
 
 <i class="fab fa-whatsapp"></i>
 
